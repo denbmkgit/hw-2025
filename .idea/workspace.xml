@@ -1,28 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="" />
+    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="hw_2025_3_2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "denbmkgit"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/denbmkgit/hw-2025.git",
+    "accountId": "e1641643-5d99-4f26-badc-661c48bbe3e3"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
   <component name="ProjectId" id="2s2dYbcVobrztzyzOc3UaGcDa8T" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.hw_03.executor": "Run",
+    "Python.temp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -41,6 +69,29 @@
       <option name="presentableId" value="Default" />
       <updated>1737657651696</updated>
     </task>
+    <task id="LOCAL-00001" summary="hw_2025_start">
+      <option name="closed" value="true" />
+      <created>1737657705307</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737657705307</updated>
+    </task>
+    <task id="LOCAL-00002" summary="hw_2025_3_2">
+      <option name="closed" value="true" />
+      <created>1737665338493</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737665338493</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="hw_2025_start" />
+    <MESSAGE value="hw_2025_3_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw_2025_3_2" />
   </component>
 </project>
