@@ -7,9 +7,8 @@ class User:
         self.password = password
         self.age = age
 
-    # def __str__(self):
-    #     return self.nickname
-
+    def __str__(self):
+        return self.nickname
 
 class Video:
     def __init__(self, title, duration, time_now=0, adult_mode=False):
@@ -31,9 +30,9 @@ class UrTube:
                 if password == i[1]:
                     self.current_user = nickname
 
-                #     print(f'identification successful for {nickname}')
-                # else:
-                #     print(f'Incorrect password for {nickname}')
+                    print(f'identification successful for {nickname}')
+                else:
+                    print(f'Incorrect password for {nickname}')
 
     def log_out(self):
         self.current_user = None
@@ -102,11 +101,11 @@ ur.watch_video('Для чего девушкам парень программи
 
 # Проверка входа в другой аккаунт
 ur.register('vasya_pupkin', 'F8098FM8fjm9jmi', 55)
-print(ur.current_user.__str__())
+
 
 # Попытка воспроизведения несуществующего видео
 ur.watch_video('Лучший язык программирования 2024 года!')
 
 
-
+print(ur.current_user)
 
