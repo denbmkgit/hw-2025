@@ -21,7 +21,7 @@ class Video:
 
 
 class UrTube:
-    def __init__(self, users=[('max', 'as', 12)], videos=[], current_user=None):
+    def __init__(self, users=[], videos=[], current_user=None):
         self.users = users
         self.videos = videos
         self.current_user = current_user
@@ -78,7 +78,7 @@ class UrTube:
                 for i in range(1, v.duration + 1):
                     sleep(0.2)
                     print(i, end=" ")
-                print('\nКонец видео')
+                print('\n Конец видео')
                 return
         print("Видео не найдено.")
 

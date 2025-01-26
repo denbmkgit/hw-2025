@@ -20,7 +20,7 @@ class Video:
 
 
 class UrTube:
-    def __init__(self, users=[('max', 'as', 12)], videos=[], current_user=None):
+    def __init__(self, users=[], videos=[], current_user=None):
         self.users = users
         self.videos = videos
         self.current_user = current_user
