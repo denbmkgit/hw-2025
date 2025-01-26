@@ -1,15 +1,14 @@
 from time import sleep
 
-
 class User:
+
     def __init__(self, nickname, password, age):
         self.nickname = nickname
-        self.password = password
+        self.password = self.hash_password(password)
         self.age = age
 
-    def __str__(self):
-        return self.nickname
-
+    def hash_password(self, password):
+        return hash(password)
 
 class Video:
     def __init__(self, title, duration, time_now=0, adult_mode=False):
@@ -18,67 +17,73 @@ class Video:
         self.time_now = time_now
         self.adult_mode = adult_mode
 
-
 class UrTube:
-    def __init__(self, users=[('max', 'as', 12), ], videos=[], current_user=None):
+
+    def __init__(self, users=[], videos=[], current_user=None):
         self.users = users
         self.videos = videos
         self.current_user = current_user
 
     def log_in(self, nickname, password):
-        for i in self.users:
-            if i[0] == nickname:
-                if password == i[1]:
-                    self.current_user = nickname
+        for user in self.users:
+            if user.nickname == nickname and  user.password == self.hash_passwor(password):
+                self.current_user = user
+                return
+        print('Неверный логин или пароль')
 
-                    print(f'identification successful for {nickname}')
-                else:
-                    print(f'Incorrect password for {nickname}')
+    def register(self, nickname, password, age):
+        for user in self.users:
+            if user.nickname == nickname:
+                print(f'Пользователь {nickname} уже существует')
+                return
+        else:
+            new_user = User(nickname, password, age)
+            self.users.append(new_user)
+            self.current_user = nickname
 
     def log_out(self):
         self.current_user = None
 
-    def register(self, nickname, password, age):
-        flag_nickname = False
-        for n in self.users:
-            if n[0] == nickname:
-                print(f'Пользователь {nickname} уже существует')
-                break
+    def add(self, *args):
+        for arg in args:
+            if self.videos == []:
+                self.videos.append(arg)
             else:
-                flag_nickname = True
-        if flag_nickname == True:
-            self.current_user = nickname
-            self.users.append((f'{nickname}', f'{password}', f'{age}'))
-
-    def add(self, *videos):
-        for video in videos:
-            if video not in self.videos:
-                self.videos.append(video)
+                # print(arg.title, 'it is ARG')
+                for video in self.videos:
+                    # print(video.title, 'it is video', video.title == arg.title)
+                #     print(video.title,  arg.title, 'it are video.title and arg.title')
+                    if video.title != arg.title:
+                #         print(self.videos, 'it is videos befor')
+                        self.videos.append(arg)
+                #         print(self.videos, 'it is videos after' )
 
     def get_videos(self, word):
-        list_title = []
-        for v in self.videos:
-            # print(v.title, 'IT IS v!!!!!!!!!!')
-            if word.upper() in v.title.upper():
-                list_title.append(v.title)
-        return list_title
+        list_titles = []
+        for video in self.videos:
+            # print(word.upper() in str(video.title).upper())
+            if word.upper() in str(video.title).upper() and video.title not in list_titles:
+                # print(word.upper(), str(video.title).upper())
+                list_titles.append(video.title)
+        return list_titles
 
     def watch_video(self, title):
-        for v in self.videos:
-            if title == v.title:
-                if ur.current_user != None:
-                    if v.adult_mode == True:
-                        for u in self.users:
-                            if u[0] == ur.current_user:
-                                if int(u[2]) >= 18:
-                                    for i in range(v.time_now, v.duration + 1):
-                                        sleep(0.2)
-                                        print(i, end='')
-                                    print('\nКонец видео')
-                                else:
-                                    print(f'{u[0]} {u[2]} Вам нет 18 лет, пожалуйста покиньте страницу')
-                    else:
-                        print('Войдите в аккаунт, чтобы смотреть видео')
+        for video in self.videos:
+            # print(video.adult_mode, video.title)
+
+            if video.title == title and self.current_user != None:
+                # print(self.current_user)
+                for user in self.users:
+                    # print(user.age)
+                    if video.adult_mode == True and user.age >= 18 or video.adult_mode == False:
+                        for i in range(video.duration):
+                            video.time_now += 1
+                            sleep(1)
+                            print(video.time_now)
+                        print('Конец видео')
+                        video.time_now = 0
+                else:
+                    print('Войдите в аккаунт, чтобы смотреть видео')
 
 
 ur = UrTube()
