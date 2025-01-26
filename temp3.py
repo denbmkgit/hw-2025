@@ -10,6 +10,7 @@ class User:
     def __str__(self):
         return self.nickname
 
+
 class Video:
     def __init__(self, title, duration, time_now=0, adult_mode=False):
         self.title = title
@@ -38,11 +39,8 @@ class UrTube:
         self.current_user = None
 
     def register(self, nickname, password, age):
-        # print(self.users)
-        # print(nickname)
         flag_nickname = False
         for n in self.users:
-            # print(n[0], nickname)
             if n[0] == nickname:
                 print(f'Пользователь {nickname} уже существует')
                 break
@@ -58,7 +56,6 @@ class UrTube:
                 self.videos.append(video)
 
     def get_videos(self, word):
-        # print(self.videos)
         list_title = []
         for v in self.videos:
             # print(v.title, 'IT IS v!!!!!!!!!!')
@@ -67,12 +64,8 @@ class UrTube:
         return list_title
 
     def watch_video(self, title):
-
-        # self.log_out()
         for v in self.videos:
             if title == v.title:
-                # print(v.adult_mode)
-                # self.log_out()
                 if ur.current_user != None:
                     if v.adult_mode == True:
                         for u in self.users:
@@ -80,10 +73,12 @@ class UrTube:
                                 if int(u[2]) >= 18:
                                     for i in range(v.time_now, v.duration + 1):
                                         sleep(0.2)
-                                        print(i)
-                                    print('Конец видео')
-                                print('Вам нет 18 лет, пожалуйста покиньте страницу')
-                print('Войдите в аккаунт, чтобы смотреть видео')
+                                        print(i, end='')
+                                    print('\nКонец видео')
+                                else:
+                                    print(f'{u[0]} {u[2]} Вам нет 18 лет, пожалуйста покиньте страницу')
+                    else:
+                        print('Войдите в аккаунт, чтобы смотреть видео')
 
 
 ur = UrTube()
@@ -110,4 +105,3 @@ print(ur.current_user)
 
 # Попытка воспроизведения несуществующего видео
 ur.watch_video('Лучший язык программирования 2024 года!')
-
