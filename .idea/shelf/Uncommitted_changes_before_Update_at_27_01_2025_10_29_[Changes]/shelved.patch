@@ -1,0 +1,182 @@
+Index: hw_03.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># home_work_3_hard\r\ndata_structure = [\r\n  [1, 2, 3],\r\n  {'a': 4, 'b': 5},\r\n  (6, {'cube': 7, 'drum': 8}),\r\n  \"Hello\",\r\n  ((), [{(2, 'Urban', ('Urban2', 35))}])\r\n]\r\n\r\n\r\nsum_all = 0\r\n\r\ndef calculate_structure_sum(d_t):\r\n    global sum_all\r\n    for i in d_t:\r\n        print(i)\r\n        if type(i)==str:\r\n            sum_all += len(i)\r\n        if type(i) == int:\r\n            sum_all += i\r\n        # if type(i) == dict:\r\n        #     for key, value in i.items():\r\n        #         if type(key) == str:\r\n        #             sum_all += len(i)\r\n        #         if type(key) == int:\r\n        #             sum_all += i\r\n        #         if type(value) == str:\r\n        #             sum_all += len(i)\r\n        #         if type(value) == int:\r\n        #             sum_all += i\r\n        # else:\r\n        #     calculate_structure_sum(i)\r\n    return sum_all\r\n\r\n\r\n\r\n\r\n\r\n# print(sum_all)\r\nresult = calculate_structure_sum(data_structure)\r\nprint(result)\r\n\r\n\r\n# # home_work_3_5\r\n# def get_multiplied_digits(number=int):\r\n#     str_number = str(number)\r\n#     first = int(str_number[0])\r\n#     # print(first, 'first')\r\n#     # print(str_number, 'str_number')\r\n#     # sum_n = sum(int(num) for num in str(str_number))\r\n#\r\n#     if len(str_number) == 2 and int(str_number[-1]) == 0:\r\n#         return first\r\n#     # elif int(str_number) == 0:\r\n#     #     return first\r\n#     elif len(str_number) > 1:\r\n#         return first * get_multiplied_digits(int(str_number[1:]))\r\n#     else:\r\n#         return first\r\n#\r\n#\r\n# result = get_multiplied_digits(40203)\r\n# print(result)\r\n# result2 = get_multiplied_digits(402030)\r\n# print(result2)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n# # home_work_3_4\r\n# def single_root_words(root_word, *other_words):\r\n#     same_word = []\r\n#     if len(same_word) < 3:\r\n#         for word in other_words:\r\n#             if root_word.upper() in word.upper() or word.upper() in root_word.upper():\r\n#                 same_word.append(word)\r\n#     return same_word\r\n#\r\n# result1 = single_root_words('rich', 'richiest', 'orichalcum', 'cheers', 'richies')\r\n# result2 = single_root_words('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')\r\n# print(result1)\r\n# print(result2)\r\n\r\n# # home_work_3_3\r\n# def print_params(a = 1, b = 'строка', c = True):\r\n#     print(a, b, c)\r\n#\r\n# print_params()\r\n# print_params(b = 25)\r\n# print_params(c = [1,2,3])\r\n#\r\n# values_list_2 = [54.32, 'Строка' ]\r\n# print_params(*values_list_2, 42)\r\n# print()\r\n# print()\r\n# values_list = [3, 4.0, 'str']\r\n# values_dict = {'a':3, 'b': 'str_2', 'c': 5.0}\r\n# values_dict_2 = {'a':3, 'c': 'str_2', 'b': 5.0}\r\n# print_params(*values_list)\r\n# print()\r\n# print(values_dict)\r\n# print()\r\n# print_params(**values_dict)\r\n# print_params(**values_dict_2)\r\n\r\n\r\n\r\n# # home_work_3_2\r\n# def send_email(message, recipient, sender=\"university.help@gmail.com\"):\r\n#     a = 0\r\n#     if '@' in recipient and '@' not in sender:\r\n#         a += 1\r\n#     if  '.com' in sender[-4:] or '.ru' in sender[-3:] or '.net' in sender[-4:]:\r\n#         a += 1\r\n#     if  '.com' in recipient[-4:] or '.ru' in recipient[-3:] or '.net' in recipient[-4:]:\r\n#         a += 1\r\n#     if a < 2:\r\n#         print(f\"Невозможно отправить письмо с адреса {sender} на адрес {recipient}\")\r\n#         return\r\n#     if recipient == sender:\r\n#         print('Нельзя отправить письмо самому себе!')\r\n#         return\r\n#     if sender == 'university.help@gmail.com':\r\n#         print(f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}')\r\n#     if sender != 'university.help@gmail.com':\r\n#         print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}')\r\n#\r\n# send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.ru')\r\n# send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')\r\n# send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')\r\n# send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n# # home_work_3_1\r\n# calls = 0\r\n# def count_calls():\r\n#     global calls\r\n#     calls += 1\r\n#     return calls\r\n#\r\n# def string_info(string):\r\n#     count_calls()\r\n#     cortege = (len(string), string.upper(), string.lower())\r\n#     return cortege\r\n#\r\n#\r\n# def is_contains(string, list_to_search):\r\n#     count_calls()\r\n#     for i in list_to_search:\r\n#         if string.upper() in str(i).upper():\r\n#             return True\r\n#     else:\r\n#        return False\r\n#\r\n# print(string_info('Capybara'))\r\n# print(string_info('Armageddon'))\r\n# print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN\r\n# print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches\r\n# print(calls)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/hw_03.py b/hw_03.py
+--- a/hw_03.py	(revision 674bb8eff22c67f3c63fe98a465a290744f36a0d)
++++ b/hw_03.py	(date 1737725724895)
+@@ -1,8 +1,8 @@
+ # home_work_3_hard
+ data_structure = [
+   [1, 2, 3],
+-  {'a': 4, 'b': 5},
+-  (6, {'cube': 7, 'drum': 8}),
++  # {'a': 4, 'b': 5},
++  # (6, {'cube': 7, 'drum': 8}),
+   "Hello",
+   ((), [{(2, 'Urban', ('Urban2', 35))}])
+ ]
+@@ -16,8 +16,10 @@
+         print(i)
+         if type(i)==str:
+             sum_all += len(i)
++
+         if type(i) == int:
+             sum_all += i
++
+         # if type(i) == dict:
+         #     for key, value in i.items():
+         #         if type(key) == str:
+@@ -36,8 +38,8 @@
+ 
+ 
+ 
+-# print(sum_all)
+-result = calculate_structure_sum(data_structure)
++print(sum_all)
++result = calculate_structure_sum([1, 2, 3])
+ print(result)
+ 
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (hw_2025)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 674bb8eff22c67f3c63fe98a465a290744f36a0d)
++++ b/.idea/misc.xml	(date 1737726032815)
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (hw_2025)" project-jdk-type="Python SDK" />
++  <component name="Black">
++    <option name="sdkName" value="Python 3.9 (hw-2025)" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (hw-2025)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/hw_2025.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/.venv\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/hw_2025.iml b/.idea/hw_2025.iml
+--- a/.idea/hw_2025.iml	(revision 674bb8eff22c67f3c63fe98a465a290744f36a0d)
++++ b/.idea/hw_2025.iml	(date 1737726032781)
+@@ -3,8 +3,9 @@
+   <component name="NewModuleRootManager">
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/.venv" />
++      <excludeFolder url="file://$MODULE_DIR$/venv" />
+     </content>
+-    <orderEntry type="inheritedJdk" />
++    <orderEntry type="jdk" jdkName="Python 3.9 (hw-2025)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d4ff38d5-52f3-45d4-a334-1120a453eac1\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 2\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2s2dYbcVobrztzyzOc3UaGcDa8T\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d4ff38d5-52f3-45d4-a334-1120a453eac1\" name=\"Changes\" comment=\"\" />\r\n      <created>1737657651696</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1737657651696</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 674bb8eff22c67f3c63fe98a465a290744f36a0d)
++++ b/.idea/workspace.xml	(date 1737726032811)
+@@ -1,18 +1,42 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="" />
++    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="middle_3_h">
++      <change beforePath="$PROJECT_DIR$/hw_03.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_03.py" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Python Script" />
++      </list>
++    </option>
++  </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 2
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "denbmkgit"
++  }
+ }]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/denbmkgit/hw-2025.git",
++    "accountId": "7d62fadc-ce5e-4430-a46c-c7919a8cc50a"
++  }
++}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 2
++}</component>
+   <component name="ProjectId" id="2s2dYbcVobrztzyzOc3UaGcDa8T" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -21,14 +45,17 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
++    "Python.hw_03.executor": "Run",
++    "Python.temp.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "master"
++    "git-widget-placeholder": "master",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+   }
+ }]]></component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
++        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -41,6 +68,19 @@
+       <option name="presentableId" value="Default" />
+       <updated>1737657651696</updated>
+     </task>
++    <task id="LOCAL-00001" summary="middle_3_h">
++      <option name="closed" value="true" />
++      <created>1737724742983</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1737724742983</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="middle_3_h" />
++    <option name="LAST_COMMIT_MESSAGE" value="middle_3_h" />
++  </component>
+ </project>
+\ No newline at end of file
