@@ -1,71 +1,77 @@
 # home_work_3_hard
 data_structure = [
-    [1, 2, 3],
-    {'a': 4, 'b': 5},
-    (6, {'cube': 7, 'drum': 8}),
-    "Hello",
-    ((), [{(2, 'Urban', ('Urban2', 35))}])
+  [1, 2, 3],
+  {'a': 4, 'b': 5},
+  (6, {'cube': 7, 'drum': 8}),
+  "Hello",
+  ((), [{(2, 'Urban', ('Urban2', 35))}])
 ]
+
 
 sum_all = 0
 
-
 def calculate_structure_sum(d_t):
     global sum_all
-    print(sum_all, 'IT IS sum_all')
     for i in d_t:
         print(i)
-        if isinstance(i, str):
-            print(i, type(i))
+        if type(i)==str:
             sum_all += len(i)
-
-        elif isinstance(i, int):
-            print(i, type(i))
+        if type(i) == int:
             sum_all += i
-        elif isinstance(i, dict):
-            for key, value in i.items():
-                print(key, value, 'There are key and value')
-                print(type(key), '- type key', key, type(value), '- type value', value)
-                if isinstance(key, str):
-                    sum_all += len(key)
-                elif type(key) == int:  # просто так
-                    sum_all += key
-                if type(value) == str:  # просто так
-                    sum_all += len(value)
-                elif isinstance(value, int):
-                    sum_all += value
-
-        else:
-            calculate_structure_sum(i)
+        # if type(i) == dict:
+        #     for key, value in i.items():
+        #         if type(key) == str:
+        #             sum_all += len(i)
+        #         if type(key) == int:
+        #             sum_all += i
+        #         if type(value) == str:
+        #             sum_all += len(i)
+        #         if type(value) == int:
+        #             sum_all += i
+        # else:
+        #     calculate_structure_sum(i)
     return sum_all
 
 
+
+
+
+# print(sum_all)
 result = calculate_structure_sum(data_structure)
 print(result)
-# print(sum_all)
 
 
 # # home_work_3_5
 # def get_multiplied_digits(number=int):
 #     str_number = str(number)
 #     first = int(str_number[0])
+#     # print(first, 'first')
+#     # print(str_number, 'str_number')
+#     # sum_n = sum(int(num) for num in str(str_number))
+#
 #     if len(str_number) == 2 and int(str_number[-1]) == 0:
 #         return first
-#     if len(str_number) > 1:
-#         if int(str_number[1:]) == 0:
-#             return first
-#         else:
-#             return first * get_multiplied_digits(int(str_number[1:]))
-#
-#
+#     # elif int(str_number) == 0:
+#     #     return first
+#     elif len(str_number) > 1:
+#         return first * get_multiplied_digits(int(str_number[1:]))
 #     else:
 #         return first
 #
 #
-# result = get_multiplied_digits(4020300000)
+# result = get_multiplied_digits(40203)
 # print(result)
 # result2 = get_multiplied_digits(402030)
 # print(result2)
+
+
+
+
+
+
+
+
+
 
 # # home_work_3_4
 # def single_root_words(root_word, *other_words):
