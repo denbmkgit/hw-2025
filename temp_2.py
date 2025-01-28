@@ -28,11 +28,15 @@ student.about()
 human = Human()
 human.about()
 print(dir(human))
+print()
 print(dir(student))
-print(human._Human__arms)
-print(student._Human__arms)
-print(student.arms)
 
+print(human._Human__arms)
+
+print(student._Human__arms)
+
+print(student.arms)
+print(student._Human__arms)
 
 
 
