@@ -67,7 +67,7 @@ print(p1.get_pos())
 p1.move(-5, 20)
 print(p1.get_pos())
 p1.voice()
-
+print(Pegasus.mro())
 # # ТО Что было решено раньше:
 # class Horse:   # Создали в бдующем родительский класс Лошадь
 #
