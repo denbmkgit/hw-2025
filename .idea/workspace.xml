@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="hw_2025_06_03-">
       <change beforePath="$PROJECT_DIR$/hw_06.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_06.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp5.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +63,15 @@
       <option name="presentableId" value="Default" />
       <updated>1737657651696</updated>
     </task>
+    <task id="LOCAL-00001" summary="hw_2025_06_03-">
+      <option name="closed" value="true" />
+      <created>1738051789201</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738051789202</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -77,5 +84,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hw_2025_06_03-" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw_2025_06_03-" />
   </component>
 </project>
