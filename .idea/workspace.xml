@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="hw_2025_06_03_finish">
+    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hw_2025.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hw_2025.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_01_2025_10_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_01_2025_10_29__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,7 +35,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/denbmkgit/hw-2025.git",
-    "accountId": "7d62fadc-ce5e-4430-a46c-c7919a8cc50a"
+    "accountId": "e1641643-5d99-4f26-badc-661c48bbe3e3"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -38,19 +49,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.game.executor": "Run",
     "Python.hw_06.executor": "Run",
-    "Python.temp5.executor": "Run",
     "Python.temp_2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/pytonProjectsForUnversity/hw_2025",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -63,39 +74,6 @@
       <option name="presentableId" value="Default" />
       <updated>1737657651696</updated>
     </task>
-    <task id="LOCAL-00001" summary="hw_2025_06_03-">
-      <option name="closed" value="true" />
-      <created>1738051789201</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1738051789202</updated>
-    </task>
-    <task id="LOCAL-00002" summary="hw_2025_06_03-">
-      <option name="closed" value="true" />
-      <created>1738061459422</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1738061459422</updated>
-    </task>
-    <task id="LOCAL-00003" summary="hw_2025_06_03_finish">
-      <option name="closed" value="true" />
-      <created>1738065340266</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1738065340266</updated>
-    </task>
-    <task id="LOCAL-00004" summary="hw_2025_06_03_finish">
-      <option name="closed" value="true" />
-      <created>1738071609752</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1738071609752</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,10 +86,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="hw_2025_06_03-" />
-    <MESSAGE value="hw_2025_06_03_finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw_2025_06_03_finish" />
   </component>
 </project>
