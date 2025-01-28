@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="hw_2025_06_03-">
+    <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="hw_2025_06_03_finish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw_06.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_06.py" afterDir="false" />
     </list>
@@ -80,7 +80,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738061459422</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="hw_2025_06_03_finish">
+      <option name="closed" value="true" />
+      <created>1738065340266</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738065340266</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hw_2025_06_03-" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw_2025_06_03-" />
+    <MESSAGE value="hw_2025_06_03_finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw_2025_06_03_finish" />
   </component>
 </project>
