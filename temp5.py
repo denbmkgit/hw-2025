@@ -25,8 +25,9 @@ class Student(Human, StudentGroup):
         super().info()
 
 
-human = Human('Denis', 136)
-print(human.name)
+
+# human = Human('Denis', 136)
+# print(human.name)
 student = Student('Max', 'Urban', 'Python 136')
 print(student.name)
 print(student.place)

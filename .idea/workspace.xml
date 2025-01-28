@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4ff38d5-52f3-45d4-a334-1120a453eac1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hw_2025.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hw_2025.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw_03.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw_06.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_06.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_05.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp5.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "denbmkgit"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/denbmkgit/hw-2025.git",
+    "accountId": "7d62fadc-ce5e-4430-a46c-c7919a8cc50a"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -33,16 +41,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.hw_06.executor": "Run",
+    "Python.temp5.executor": "Run",
     "Python.temp_2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
       </set>
     </attachedChunks>
   </component>

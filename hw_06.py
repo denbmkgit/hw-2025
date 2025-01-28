@@ -1,14 +1,47 @@
 # module 6.3
+from random import randint
+class Animal:
+    live = True
+    sound = None
+    _DEGREE_OF_DANGER =0
+
+    def __init__(self, _cords=[0, 0, 0], speed=int):
+        self._cords = _cords
+        self.speed = speed
+
+    def move(self, dx, dy, dz):
+        pass
+
+    def get_cords(self):
+        print(f'X: {self._cords[0]}, Y: {self._cords[1]}, Z: {self._cords[2]}')
+
+    def attack(self):
+        pass
+
+class Bird(Animal):
+    beak =True
+
+    def lay_eggs(self):
+        random_eggs = randint(1, 4)
+        print(f'Here are(is) {random_eggs} eggs for you"')
 
 
+class AquaticAnimal(Animal):
+    _DEGREE_OF_DANGER = 3
+
+    def dive_in(self, dz):
+        pass
 
 
+class PoisonousAnimal(Animal):
+    _DEGREE_OF_DANGER = 8
 
 
+class Duckbill(Bird, AquaticAnimal, PoisonousAnimal):
+    sound = "Click-click-click"
 
-
-
-
+    # def __init__(self,sound):
+    #     self.sound = "Click-click-click"
 
 
 
