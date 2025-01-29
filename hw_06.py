@@ -1,73 +1,200 @@
-# module 6.3 old
-class Horse:
-    def __init__(self):         # создали метод инит - нечего не передаем сюда (кроме самого объекта)
-        self.x_distance = 0     # При создании объекта дистанция у него 0
-        self.sound = 'Frrr'     # При создании объекта ом може "издавать" звук Фррр
+# module 6 hard
+class Figure:
+    def __init__(self, __sides=[], __color=[0, 0, 0], filled=True):
+        self.__sides = __sides
+        self.__color = __color
+        self.filled = filled
+
+    def get_color(self):
+        return self.__color
+
+    def __is_valid_color(self,r,g,b):
+        if 0 <= r <= 255 and   0 <= g <= 255 and 0 <= b <= 255:
+            return True
+
+    def set_color(self,r,g,b):
+        if self.__is_valid_color == True:
+            self.__color = [r,g,b]
 
 
-    # x_distance = 0
-    # sound = 'Frrr'
-
-    def run(self, dx):
-        self.x_distance += dx
-        return self.x_distance
-
-
-class Eagle:
-    def __init__(self):      # создали метод инит - нечего не передаем сюда (кроме самого объекта)
-        self.y_distance = 0  #  При создании объекта дистанция у него 0
-        self.sound = 'I train, eat, sleep, and repeat'    # При создании объекта ом може "сказать" фразу "Я ...
-
-
-    # y_distance = 0
-    # sound = 'I train, eat, sleep, and repeat'
-
-    def fly(self, dy):             #  Созадли метод литеть и передаем сюда дистанцию
-        self.y_distance += dy       # дистанция объкта при вызове этого метода увеличиться на велечину ДУ
-        return self.y_distance       # метод возвращает новую "дистанцию" объекта (точку на оси У)
+    def  __is_valid_sides(self, *sides):
+        col_sides = 0
+        for side in sides:
+            if isinstance(side, int):
+                col_sides += 1
+            else:
+                break
+        if self.__sides == col_sides:
+            return True
+        else:
+            False
 
 
-    # def fly(self, dy):
-    #         self.y_distance += dy
-    #         return self.y_distance
+    def get_sides(self):
+        return self.__sides
 
-class Pegasus (Horse, Eagle):
 
-    def __init__(self):       # Создали метод инит, в который нечего не передаем, кроме самого объекта
-        super().__init__()    # сказали, что бы "запустил" инит в Лошади и принял все значения от туда
-        Eagle.__init__(self)  # сказали, что бы "запустил" инит в Орле и принял все значения от туда
-    # def __init__(self):
-    #     super().__init__()
-    #     Eagle.__init__(self)
+    def __len__(self):
+        perimetr = 0
+        for side in self.__sides:
+            perimetr += side
+        return perimetr
 
-    def move(self, dx, dy):  #  созадли метод двингаться
-        self.run(dx)        #  запустили метод Бежать и передали туда "дистацию" (на какое значение увеличиться ДХ - Х)
-        self.fly(dy)        #  запустили метод Лететь и передали туда "дистацию" (на какое значение увеличиться ДУ - У)
+    def set_sides(self, *new_sides):
+        col_sides = 0
+        for side in new_sides:
+            col_sides += 1
+            if col_sides != self.sides_count:
+                self.sides_count == col_sides
 
-    # def move(self, dx, dy):
-    #     self.run(dx)
-    #     self.fly(dy)
 
-    def get_pos(self):       #    созадли метод дай позицию (покажи, скажи свою позицию)
-        return (self.x_distance, self.y_distance)  # вернули позицию объекта по осям Х и У
 
-    # def get_pos(self):
-    #     return (self.x_distance, self.y_distance)
 
-    def voice(self):         #  создали метод "подай голос"
-        print(self.sound)    # печатаем "голосом" того кто сейчас "круче" - "Первее", Левее или правее???
+class Circle(Figure):
+    sides_count = 1
+    def __init__(self, __radius,  __sides=[], __color=[0, 0, 0], filled=True):
+        self.__radius = __sides/(2*3.1415926)
+        super().__init__( __sides=[], __color=[0, 0, 0], filled=True)
 
-    # def voice(self):
-    #     print(self.sound)
 
-p1 = Pegasus()
-print(p1.get_pos())
-p1.move(10, 15)
-print(p1.get_pos())
-p1.move(-5, 20)
-print(p1.get_pos())
-p1.voice()
-print(Pegasus.mro())
+    def get_square(self):
+        square = 0
+        self.__radius * 3.1415926 * self.__radius**2
+        return square
+
+
+class Triangle(Figure):
+    sides_count = 3
+    def __init__(self):
+        super().__init__()
+
+    def get_square(self):
+        square = 0
+        return 'GERON'
+
+
+class Cube(Figure):
+    sides_count = 12
+    def __init__(self, __sides=[], __color=[0, 0, 0], filled=True):
+        self.__sides = [__sides, __sides, __sides, __sides, __sides, __sides, __sides, __sides, __sides, __sides, __sides, __sides]
+        super().__init__(__color=[0, 0, 0], filled=True)
+
+
+    def get_square(self):
+        square = 0
+        for side in self.__sides:
+            square = side ** 3
+        return square
+
+
+circle1 = Circle((200, 200, 100), 10) # (Цвет, стороны)
+cube1 = Cube((222, 35, 130), 6)
+
+# Проверка на изменение цветов:
+circle1.set_color(55, 66, 77) # Изменится
+print(circle1.get_color())
+cube1.set_color(300, 70, 15) # Не изменится
+print(cube1.get_color())
+
+# Проверка на изменение сторон:
+cube1.set_sides(5, 3, 12, 4, 5) # Не изменится
+print(cube1.get_sides())
+circle1.set_sides(15) # Изменится
+print(circle1.get_sides())
+
+# Проверка периметра (круга), это и есть длина:
+print(len(circle1))
+
+# Проверка объёма (куба):
+print(cube1.get_volume())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # module 6.3 old
+# class Horse:
+#     def __init__(self):         # создали метод инит - нечего не передаем сюда (кроме самого объекта)
+#         self.x_distance = 0     # При создании объекта дистанция у него 0
+#         self.sound = 'Frrr'     # При создании объекта ом може "издавать" звук Фррр
+#
+#
+#     # x_distance = 0
+#     # sound = 'Frrr'
+#
+#     def run(self, dx):
+#         self.x_distance += dx
+#         return self.x_distance
+#
+#
+# class Eagle:
+#     def __init__(self):      # создали метод инит - нечего не передаем сюда (кроме самого объекта)
+#         self.y_distance = 0  #  При создании объекта дистанция у него 0
+#         self.sound = 'I train, eat, sleep, and repeat'    # При создании объекта ом може "сказать" фразу "Я ...
+#
+#
+#     # y_distance = 0
+#     # sound = 'I train, eat, sleep, and repeat'
+#
+#     def fly(self, dy):             #  Созадли метод литеть и передаем сюда дистанцию
+#         self.y_distance += dy       # дистанция объкта при вызове этого метода увеличиться на велечину ДУ
+#         return self.y_distance       # метод возвращает новую "дистанцию" объекта (точку на оси У)
+#
+#
+#     # def fly(self, dy):
+#     #         self.y_distance += dy
+#     #         return self.y_distance
+#
+# class Pegasus (Horse, Eagle):
+#
+#     def __init__(self):       # Создали метод инит, в который нечего не передаем, кроме самого объекта
+#         super().__init__()    # сказали, что бы "запустил" инит в Лошади и принял все значения от туда
+#         Eagle.__init__(self)  # сказали, что бы "запустил" инит в Орле и принял все значения от туда
+#     # def __init__(self):
+#     #     super().__init__()
+#     #     Eagle.__init__(self)
+#
+#     def move(self, dx, dy):  #  созадли метод двингаться
+#         self.run(dx)        #  запустили метод Бежать и передали туда "дистацию" (на какое значение увеличиться ДХ - Х)
+#         self.fly(dy)        #  запустили метод Лететь и передали туда "дистацию" (на какое значение увеличиться ДУ - У)
+#
+#     # def move(self, dx, dy):
+#     #     self.run(dx)
+#     #     self.fly(dy)
+#
+#     def get_pos(self):       #    созадли метод дай позицию (покажи, скажи свою позицию)
+#         return (self.x_distance, self.y_distance)  # вернули позицию объекта по осям Х и У
+#
+#     # def get_pos(self):
+#     #     return (self.x_distance, self.y_distance)
+#
+#     def voice(self):         #  создали метод "подай голос"
+#         print(self.sound)    # печатаем "голосом" того кто сейчас "круче" - "Первее", Левее или правее???
+#
+#     # def voice(self):
+#     #     print(self.sound)
+#
+# p1 = Pegasus()
+# print(p1.get_pos())
+# p1.move(10, 15)
+# print(p1.get_pos())
+# p1.move(-5, 20)
+# print(p1.get_pos())
+# p1.voice()
+# print(Pegasus.mro())
 # # ТО Что было решено раньше:
 # class Horse:   # Создали в бдующем родительский класс Лошадь
 #
